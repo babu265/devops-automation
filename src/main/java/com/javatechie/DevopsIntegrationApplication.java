@@ -1,24 +1,21 @@
 package com.javatechie;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
 @SpringBootApplication
-public class HelloWorldApp {
+@RestController
+public class DevopsIntegrationApplication {
 
-    private int counter = 0;
+	@GetMapping
+	public String message(){
+		return "welcome to javatechie";
+	}
 
-    public static void main(String[] args) {
-        SpringApplication.run(HelloWorldApp.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(DevopsIntegrationApplication.class, args);
+	}
 
-    @GetMapping("/")
-    @ResponseBody
-    public String helloWorld() {
-        counter++;
-        return "Hello World - " + counter;
-    }
 }
