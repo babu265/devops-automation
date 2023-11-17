@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t rameshaws22/devops-integration .'
+                    sh 'docker build -t rameshaws22/k8s-integration .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u rameshaws22 -p ${dockerhubpwd}'
 
 }                 
-                   sh 'docker push rameshaws22/devops-integration'
+                   sh 'docker push rameshaws22/k8s-integration'
                 }
             }
         }
