@@ -15,7 +15,7 @@ spec:
       containers:
         - name: spring-boot-k8s
           imagePullPolicy: Always
-          image: rameshaws22/k8s-integration # Image that will be used to containers in the cluster
+          image: rameshaws22/k8s-integration:latest # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
