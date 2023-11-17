@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u rameshaws22 -p ${dockerhubpwd}'
 
 }                 
-                   sh 'docker push rameshaws22/devops-integration:latest'
+                   sh 'docker push rameshaws22/devops-integration'
                 }
             }
         }
