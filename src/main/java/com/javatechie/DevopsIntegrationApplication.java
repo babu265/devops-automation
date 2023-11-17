@@ -27,12 +27,12 @@ public static void main(String[] args) {
 
 @Controller
 @SpringBootApplication
-public class HelloWorldApp {
+public class DevopsIntegrationApplication {
 
     private int counter = 0;
 
     public static void main(String[] args) {
-        SpringApplication.run(HelloWorldApp.class, args);
+        SpringApplication.run(DevopsIntegrationApplication.class, args);
     }
 
     @GetMapping("/")
