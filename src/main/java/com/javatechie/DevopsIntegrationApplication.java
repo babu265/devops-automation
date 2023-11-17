@@ -40,7 +40,7 @@ public class DevopsIntegrationApplication {
     @ResponseBody
     public String helloWorld() {
         counter++;
-        //return "Hello World - " + counter;
-		return "Hello World - Ramesh";
+        return "Hello World - " + counter;
+		
     }
 }  
