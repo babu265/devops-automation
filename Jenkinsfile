@@ -23,7 +23,7 @@ pipeline {
                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
                    sh 'docker login -u rameshaws22 -p ${dockerhubpwd}'
 
-}
+}                  sh 'docker image tag rameshaws22/devops-integration:v1'
                    sh 'docker push rameshaws22/devops-integration:v1'
                 }
             }
