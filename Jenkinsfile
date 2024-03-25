@@ -23,17 +23,11 @@ pipeline {
                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
                    sh 'docker login -u rameshaws22 -p ${dockerhubpwd}'
 
-}                 
+                    }                 
                    sh 'docker push rameshaws22/k8s-integration'
                 }
             }
         }
-        stage('Deploy to k8s'){
-            steps{
-                script{
-                    kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'kubeconfig')
-                }
-            }
-        }
+
     }
 }
